@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/tvSettingsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/Foreground"
+        android:fontFamily="sans-serif"
+        android:paddingVertical="10dp"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textColor="@color/Background"
+        android:textSize="24sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSettingsHeader">
+
+
+        <TextView
+            android:id="@+id/tvDesiredDailyCalorieIntake"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:background="@color/Foreground"
+            android:paddingVertical="7dp"
+            android:singleLine="false"
+            android:text="@string/tv_desired_daily_10_calorie_intake"
+            android:textAlignment="center"
+            android:textColor="@color/Background" />
+
+        <EditText
+            android:id="@+id/etDesiredDailyCalorieIntake"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1.5"
+            android:background="@color/Foreground"
+            android:hint="@string/calorie_intake_hint"
+            android:textAlignment="center"
+            android:textColor="@color/wine"
+            android:textColorHint="@color/Background" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llMaxSearchHistoryItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/llMaxSearchHistoryItems"
+        app:layout_constraintTop_toBottomOf="@id/llCalories">
+
+
+        <TextView
+            android:id="@+id/tvMaxSearchHistoryItems"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:background="@color/Foreground"
+            android:paddingVertical="7dp"
+            android:singleLine="false"
+            android:text="@string/max_search_items"
+            android:textAlignment="center"
+            android:textColor="@color/Background" />
+
+        <EditText
+            android:id="@+id/etMaxSearchHistoryItems"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1.5"
+            android:background="@color/Foreground"
+            android:hint="@string/max_search_items_hint"
+            android:textAlignment="center"
+            android:textColor="@color/wine"
+            android:textColorHint="@color/Background" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llDesiredDietTypeMaxAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llMaxSearchHistoryItems">
+
+
+        <TextView
+            android:id="@+id/tvDesiredDietTypeMaxAmount"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:background="@color/Foreground"
+            android:paddingVertical="7dp"
+            android:singleLine="false"
+            android:text="@string/tv_desired_diet_type_max_amount"
+            android:textAlignment="center"
+            android:textColor="@color/Background" />
+
+        <Spinner
+            android:id="@+id/spinnerDietType"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etDesiredDietTypeMaxAmount"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@color/Foreground"
+            android:hint="@string/_57g"
+            android:paddingHorizontal="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/wine"
+            android:textColorHint="@color/Background" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llDesiredDietTypeMaxAmount">
+
+
+        <TextView
+            android:id="@+id/tvPriority"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:background="@color/Foreground"
+            android:paddingVertical="15dp"
+            android:singleLine="false"
+            android:text="@string/priority"
+            android:textAlignment="center"
+            android:textColor="@color/Background" />
+
+        <Spinner
+            android:id="@+id/spinnerPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/Foreground"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+
+        android:textColor="@color/Background"
+        android:textSize="20sp"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnBackThirdActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/Foreground"
+        android:textColor="@color/Background"
+        android:text="@string/Back"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
+
+        android:backgroundTint="@color/Foreground"
+        android:textColor="@color/Background"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        android:text="@string/save"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintStart_toEndOf="@+id/btnBackThirdActivity" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    >
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:text="@string/settings"
+        android:textColor="@color/Foreground"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calorieIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/Foreground"
+        android:textColor="@color/Background"
+        android:text="@string/daily_calorie_intake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings" />
+
+    <EditText
+        android:id="@+id/kcalInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="@string/enter_kcal"
+
+        android:minHeight="40dp"
+        android:padding="10dp"
+        android:textColor="@color/Background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings" />
+
+    <Button
+        android:id="@+id/btnBackThirdActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/btnBackThirdActivity" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>-->

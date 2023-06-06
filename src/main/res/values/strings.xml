@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MyDietPal</string>
+    <string name="search_history">Search History</string>
+    <string name="title">MyDietPal</string>
+    <string name="settings">Settings</string>
+    <string name="searchPlaceholder">Enter food..</string>
+    <string name="select">Select</string>
+    <string name="mealType">MealType</string>
+    <string name="label">label</string>
+    <string name="dietLabels">dietLabels</string>
+    <string name="kcal">kcal</string>
+
+
+    <string name="desired_daily_10_calorie_intake">Desired daily \n calorie intake</string>
+    <string name="maximum_search_history_items">Maximum search history items</string>
+    <string name="priority">Priority</string>
+    <string name="max_search_items">Maximum search \n history items</string>
+    <string name="max_search_items_hint">eg. 10</string>
+    <string name="calorie_intake_hint">eg. 2500 cal</string>
+    <string name="tv_desired_diet_type_max_amount">Desired diet type / \n max amount</string>
+    <string name="et_desired_diet_type_max_amount">eg. 10</string>
+    <string name="tv_desired_daily_10_calorie_intake">Desired Daily \n Calorie Intake</string>
+    <string name="_57g">57g</string>
+    <string name="save">Save</string>
+
+
+    <string name="daily_calories_intake">Daily calories intake</string>
+    <string name="daily_calorie_intake">Daily calorie intake</string>
+    <string name="enter_kcal">Enter kcal..</string>
+    <string name="Back">Return</string>
+    <string name="reset">Reset</string>
+
+</resources>

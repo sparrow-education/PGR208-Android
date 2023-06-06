@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/myDietPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/title"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="@color/Foreground"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="6"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btn_search_history"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:layout_weight="3"
+            android:backgroundTint="@color/Foreground"
+
+            android:text="@string/search_history"
+            android:textColor="@color/Background" />
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/Foreground"
+            android:textColor="@color/Background"
+            android:text="@string/settings"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:weightSum="6"
+        >
+
+        <EditText
+            android:id="@+id/et_search_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="start"
+            android:hint="@string/searchPlaceholder"
+            android:inputType="textCapWords"
+
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#757575" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_margin="10sp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/Foreground"
+            android:text="Search"
+
+            android:textColor="@color/Background" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+</LinearLayout>
